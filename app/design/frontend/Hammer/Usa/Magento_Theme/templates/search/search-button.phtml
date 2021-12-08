@@ -1,0 +1,17 @@
+<div class="search-button"></div>
+
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        $('.search-button').click(function(){
+            var searchBar = $('.keeler-search-container');
+
+            if(searchBar.is(":hidden")) {
+                searchBar.slideDown('fast');
+            } else {
+                searchBar.slideUp('fast');
+            }
+        });
+    });
+</script>

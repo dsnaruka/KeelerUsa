@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!--
+     /**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <head>
+            <css src="bws.css" />
+        </head>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/keelerlogo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">159</argument>
+                <argument name="logo_img_height" xsi:type="number">37</argument>
+            </arguments>
+        </referenceBlock>
+        <!-- Header Section -->
+        <referenceBlock name="header">
+            <arguments>
+                <argument name="show_part" xsi:type="string"> </argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="header.panel.wrapper">
+            <container name="search.container.content" as="search-container" label="" htmlTag="div" htmlClass="keeler-search-container" after="-">
+            </container>
+        </referenceContainer>
+        <referenceContainer name="header.panel">
+            <container name="header.up.social.panel" htmlTag="div" htmlClass="header-social-wrap" before="-">
+                <block class="Magento\Cms\Block\Block" name="up_header_left">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">up_header_left_social</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="up_header_right_phone">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">up_header_right_phone</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="header.up.user.panel" htmlTag="div" htmlClass="header-user-wrap"  after="header.up.social.panel">
+                <!--<block class="Magento\Framework\View\Element\Template" name="search-button" template="Magento_Theme::search/search-button.phtml" before="minicart"/>-->
+            </container>
+        </referenceContainer>
+        <referenceContainer name="header.up.user.panel">
+            <container name="header.links.panel" htmlTag="div" htmlClass="header-links-wrap" >
+            </container>
+        </referenceContainer>
+        <move element="header.links" destination="header.links.panel" after="-"/>
+        <referenceBlock name="register-link" remove="true" />
+        <referenceBlock name="header.links">
+            <block class="Magento\Cms\Block\Block" name="header_links_custom" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header_links</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <!--   <move element="mobile.search" destination="search.container.content" after="-" />-->
+        <!-- move minicart -->
+        <move element="minicart" destination="header.up.user.panel"  before="header.links.panel"/>
+        <move element="top.search" destination="header.up.user.panel" before="-"/>
+        <referenceContainer name="header-wrapper">
+            <container name="header.main.links.panel" htmlTag="div" htmlClass="header-main-links-wrap" after="-">
+                <block class="Magento\Cms\Block\Block" name="header_main_links_custom">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">header_main_links</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="header.school.links" htmlTag="div" htmlClass="header-school-links" after="-">
+                <block class="Hammer\CatCollection\Block\Categories" name="header_school_custom_block" template="Magento_Theme::html/school-custom-links.phtml" after="-"/>
+            </container>
+        </referenceContainer>
+        <!-- Remove links from footer -->
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="privacy-policy-link" remove="true" />
+        <referenceBlock name="search-term-popular-link" remove="true" />
+        <referenceBlock name="contact-us-link" remove="true" />
+        <referenceBlock name="catalog-search-advanced-link" remove="true" />
+        <referenceBlock name="sales-guest-form-link" remove="true" />
+        <referenceBlock name="mp_footer_link" remove="true" />
+        <!-- Remove subscription box from footer -->
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="footer-container">
+            <container name="keeler.footer" htmlTag="div" htmlClass="footer keeler-footer">
+                <block class="Magento\Cms\Block\Block" name="keeler_footer">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">keeler_footer</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceBlock>
+    </body>
+</page>

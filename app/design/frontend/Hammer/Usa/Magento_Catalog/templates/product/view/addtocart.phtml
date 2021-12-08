@@ -1,0 +1,130 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var $block \Magento\Catalog\Block\Product\View */
+?>
+<?php $_product     = $block->getProduct(); ?>
+<?php $buttonTitle  = __('Add to Cart'); ?>
+<?php 
+$_helper            = $this->helper('Magento\Catalog\Helper\Output');
+$showEnquiry        = $_helper->productAttribute($_product, $_product->getMakeAnEnquiry(), 'make_an_enquiry');
+$orderSample        = $_helper->productAttribute($_product, $_product->getshowOrderASample(), 'show_order_a_sample');
+?>
+<?php if ($_product->isSaleable() && $showEnquiry != "1" ): ?>
+<div class="box-tocart">
+    <div class="fieldset">
+        <?php if ($block->shouldRenderQuantity()) :?>
+        <div class="field qty">
+            <label class="label" for="qty"><span><?= $block->escapeHtml(__('Qty')) ?></span></label>
+            <div class="control">
+                <input type="number"
+                       name="qty"
+                       id="qty"
+                       min="0"
+                       value="<?= $block->getProductDefaultQty() * 1 ?>"
+                       title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
+                       class="input-text qty"
+                       data-validate="<?= $block->escapeHtmlAttr(json_encode($block->getQuantityValidators())) ?>"
+                       />
+            </div>
+        </div>
+        <?php endif; ?>
+        <div class="actions">
+            <button type="submit"
+                    title="<?= $block->escapeHtmlAttr($buttonTitle) ?>"
+                    class="action primary tocart"
+                    id="product-addtocart-button" disabled>
+                <span><?= $block->escapeHtml($buttonTitle) ?></span>
+            </button>
+            <?= $block->getChildHtml('', true) ?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+
+<?php
+if($showEnquiry == "1"): ?>
+    <button type="button" id="ordersample3" class="action ordersample">
+    <span data-bind="i18n: 'Make an enquiry'">Make an enquiry</span>
+</button>
+<p>&nbsp;</p>
+<style>.product-info-main .product-info-price .price-box {display: none !important;}</style>
+<script>
+require(['jquery'], function($) {
+    // Get the modal
+    var modal3 = document.getElementById("bfb-form-containerbfb37");
+
+    // Get the button that opens the modal
+    var btn3 = document.getElementById("ordersample3");
+
+    // Get the <span> element that closes the modal
+    var span3 = document.getElementsByClassName("close3")[0];
+
+    // When the user clicks on the button, open the modal
+    btn3.onclick = function() {
+        modal3.style.display = "flex";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span3.onclick = function() {
+        modal3.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal3) {
+            modal3.style.display = "none";
+        }
+    }
+});
+</script>
+<?php endif; ?>
+
+<?php 
+if($orderSample == "1"): ?>
+    <button type="button" id="ordersample" class="action ordersample">
+    <span data-bind="i18n: 'Order a sample'">Order a sample</span>
+</button>
+
+<script>
+require(['jquery'], function($) {
+    // Get the modal
+    var modal = document.getElementById("bfb-form-containerbfb38");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("ordersample");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "flex";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+</script>
+<?php endif; ?>
+
+
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/js/validate-product": {}
+        }
+    }
+</script>

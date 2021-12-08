@@ -1,0 +1,106 @@
+// -- Header links
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  body.cms-home {
+    .page-main {
+      padding: 0;
+
+      .page.messages {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    .home-container {
+      border-top: 2px dotted @color-blue-light;
+      padding-top: 10px;
+      font-family: @font-raleway;
+      font-size: @font-size__s + 2px;
+      color: @color-gray-dark;
+      margin-bottom: 20px;
+
+      p {
+        margin: 0 0 10px;
+        font-weight: @font-weight__regular;
+      }
+
+      blockquote {
+        padding: 10px 20px;
+        margin: 0 0 20px;
+        font-size: @font-size__l - 1px;
+        font-style: normal;
+        border-left: 5px solid #eee;
+        color: @color-gray-dark;
+        h4 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          padding-left: 0;
+        }
+      }
+      .home-promo {
+        text-align: center;
+        div {
+          display: inline;
+        }
+      }
+    }
+
+    // footer home
+    .home-k-series-container {
+      background: @color-skyblue;
+      padding: 30px 0;
+      font-family: @font-raleway;
+      margin: auto;
+      p {
+        margin: 25px 0;
+      }
+
+      img {
+
+      }
+
+      h3 {
+        color: @color-blue-dark;
+        font-weight: @font-weight__bold;
+      }
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  body.cms-home {
+    .page-main {
+      .home-container {
+        > .row {
+          max-width: @home__max-width;
+          margin: auto;
+        }
+
+        .home-promo {
+          text-align: right;
+          div {
+            display: block;
+          }
+        }
+      }
+      // footer home
+      .home-k-series-container {
+        .container {
+          max-width: @home__max-width;
+          margin: auto;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

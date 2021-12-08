@@ -1,0 +1,87 @@
+// -- Header
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+  header.page-header {
+    margin-bottom: 35px;
+
+    // -- up header
+    .panel.wrapper {
+      background-color: @color-blue-light;
+
+      .panel.header {
+        max-width: @header__max-width;
+        margin: 0 auto;
+        padding: 10px @layout-indent__width;
+        position: relative;
+        z-index: 10;
+
+        .header-user-wrap {
+        }
+      }
+
+    }
+
+    // -- header content
+    .header.content {
+      max-width: @header__max-width;
+      margin: 0 auto;
+      padding: 30px @layout-indent__width 0 @layout-indent__width;
+      z-index: 1;
+    }
+  }
+
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  header.page-header {
+    .header.content {
+      .logo {
+        float: none;
+        margin: 0;
+        img {
+          margin: auto;
+        }
+      }
+    }
+
+    // -- up header
+    .panel.wrapper {
+      .header-user-wrap {
+
+      }
+    }
+
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+  header.page-header {
+    // -- up header
+    .panel.wrapper {
+
+      .header-search-wrap {
+        width: 50%;
+        height: @up-header__height;
+        float: right;
+
+        .header-phone {
+          float: right;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<?php
+$objectManager      =  \Magento\Framework\App\ObjectManager::getInstance();
+$registry           = $objectManager->get('\Magento\Framework\Registry');
+$currentProduct     = $registry->registry('current_product'); ?>
+<?php echo $this->helper('Magento\Catalog\Helper\Output')->productAttribute($currentProduct, $currentProduct->getPdpInfoBox(), 'pdp_info_box') ?>

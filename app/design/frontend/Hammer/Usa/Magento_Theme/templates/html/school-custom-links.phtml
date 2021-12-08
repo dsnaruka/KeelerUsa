@@ -1,0 +1,24 @@
+<?php
+$categories = $block->getCategoryCollection();
+$currentStore = $block->getCurrentStoreCode();
+?>
+<?php if($currentStore != \Magento\Store\Model\Store::SCOPE_DEFAULT): ?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <?php echo $this->getLayout()->createBlock('magento\Cms\Block\Block')->setBlockId('header_school_logo')->toHtml();?>
+        </div>
+        <div class="col-md-9">
+            <ul class="cat_menu">
+                <?php foreach ($categories as $category) : ?>
+                    <li>
+                        <a href="<?= $category->getUrl(); ?>">
+                            <?= $category->getName(); ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+</div>
+<?php endif; ?>

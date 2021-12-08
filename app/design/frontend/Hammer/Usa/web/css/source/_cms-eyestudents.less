@@ -1,0 +1,363 @@
+& when (@media-common = true) {
+  .home-eye-container {
+    font-family: @font-family__base;
+
+    .eye-top-banner {
+      border-bottom: 20px solid @color-gold;
+      margin-bottom: 50px;
+
+      .img-responsive {
+        width: 100%;
+      }
+    }
+
+    .eye-content {
+      .eye-school {
+        .main-custom {
+          margin-bottom: 50px;
+
+
+          &:after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+
+          .eye-school-right {
+            text-align: right;
+            height: 109px;
+            line-height: 132px;
+
+            .eye-register-login {
+              width: 360px;
+              display: inline-block;
+
+              .eye-register {
+                float: left;
+                width: 165px;
+                margin-right: 15px;
+                text-align: center;
+
+                .eye-register-buttom {
+                  background: @color-blue-middle;
+                  font-size: 14px;
+                  color: @color-white;
+                  width: 165px;
+                  display: block;
+                  height: 32px;
+                  line-height: 32px;
+                  text-decoration: none;
+                }
+              }
+
+              .eye-login {
+                float: left;
+                width: 165px;
+                margin-left: 15px;
+                text-align: center;
+
+                .eye-login-buttom {
+                  background: @color-blue-dark;
+                  font-size: 14px;
+                  color: @color-white;
+                  width: 165px;
+                  display: block;
+                  height: 32px;
+                  line-height: 32px;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .why-keeler {
+        box-sizing: border-box;
+        background: @color-skyblue;
+        color: @color-gray-dark;
+        font-size: 14px;
+        padding: 30px 60px;
+
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+
+        .main-custom {
+          .why-keeler-left {
+            box-sizing: border-box;
+          }
+
+          .why-keeler-right {
+            .promotions {
+              .promotions-title {
+                text-align: center;
+                background: @color-gold;
+                color: @color-white;
+                font-size: 15px;
+                margin: 0;
+                padding: 12px;
+                text-transform: uppercase;
+              }
+              .promotions-content {
+                text-align: center;
+                position: relative;
+
+                .promotion-link {
+                  background: @color-blue-middle none repeat scroll 0 0;
+                  bottom: 20px;
+                  color: white;
+                  display: block;
+                  font-size: 8px;
+                  font-weight: bold;
+                  height: 28px;
+                  left: 20px;
+                  letter-spacing: 1px;
+                  line-height: 28px;
+                  position: absolute;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  width: 89px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+  .home-eye-container {
+    .eye-content {
+      .eye-school {
+        .main-custom {
+          .eye-school-left {
+            width: 50% !important;
+            float: left !important;
+          }
+
+          .eye-school-right {
+            width: 50% !important;
+            float: right !important;
+            text-align: right;
+            height: 109px;
+            line-height: 132px;
+
+            .eye-register-login {
+              width: 360px !important;
+              display: inline-block;
+
+              .eye-register {
+                float: left !important;
+                width: 165px !important;
+                margin-right: 15px;
+                text-align: center;
+
+                .eye-register-buttom {
+                  background: @color-blue-middle;
+                  font-size: 14px;
+                  color: @color-white;
+                  width: 165px;
+                  display: block;
+                  height: 32px;
+                  line-height: 32px;
+                  text-decoration: none;
+                }
+              }
+
+              .eye-login {
+                float: left !important;
+                width: 165px !important;
+                margin-left: 15px !important;
+
+                .eye-login-buttom {
+                  width: 165px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .why-keeler {
+        padding: 30px 60px !important;
+
+        .main-custom {
+          .why-keeler-left {
+            width: 854px !important;
+            float: left !important;
+            padding-right: 40px !important;
+            margin-bottom: 0 !important;
+            text-align: left !important;
+          }
+
+          .why-keeler-right {
+            width: 246px !important;
+            float: left !important;;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//
+//  Tablet
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .home-eye-container {
+    .eye-content {
+      .eye-school {
+        .main-custom {
+          .eye-school-left {
+            width: 100% !important;
+            float: none !important;
+            margin-bottom: 25px;
+            text-align: center;
+          }
+
+          .eye-school-right {
+            width: 100% !important;
+            float: none !important;
+            text-align: right;
+            height: 109px;
+            line-height: 132px;
+
+            .eye-register-login {
+              width: 100% !important;
+              display: inline-block;
+
+              .eye-register {
+                float: none !important;
+                width: 100% !important;
+                margin-right: 0 !important;
+                margin-bottom: 15px;
+
+                .eye-register-buttom {
+                  width: 100% !important;
+                }
+              }
+
+              .eye-login {
+                float: none !important;
+                width: 100% !important;
+                margin-left: 0 !important;
+
+                margin-bottom: 15px;
+
+                .eye-login-buttom {
+                  width: 100% !important;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .why-keeler {
+        padding: 30px 20px !important;
+
+        .main-custom {
+          .why-keeler-left {
+            width: 100% !important;
+            float: none !important;
+            padding-right: 0 !important;
+            margin-bottom: 25px !important;
+            text-align: left !important;
+          }
+
+          .why-keeler-right {
+            width: 295px !important;
+            float: none !important;
+            padding-right: 0 !important;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .home-eye-container {
+    .eye-content {
+      .eye-school {
+        .main-custom {
+          .eye-school-left {
+            width: 100% !important;
+            float: none !important;
+            margin-bottom: 25px;
+            text-align: center;
+          }
+
+          .eye-school-right {
+            width: 100% !important;
+            float: none !important;
+            text-align: right;
+            height: 109px;
+            line-height: 132px;
+
+            .eye-register-login {
+              width: 100% !important;
+              display: inline-block;
+
+              .eye-register {
+                float: none !important;
+                width: 100% !important;
+                margin-right: 0 !important;
+                margin-bottom: 15px;
+
+                .eye-register-buttom {
+                  width: 100% !important;
+                }
+              }
+
+              .eye-login {
+                float: none !important;
+                width: 100% !important;
+                margin-left: 0 !important;
+
+                margin-bottom: 15px;
+
+                .eye-login-buttom {
+                  width: 100% !important;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .why-keeler {
+        padding: 30px 20px !important;
+
+        .main-custom {
+          .why-keeler-left {
+            width: 100% !important;
+            float: none !important;
+          }
+
+          .why-keeler-right {
+            width: 246px !important;
+            float: none !important;
+            margin: auto !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+       <referenceBlock name="product.info.details">
+			<block class="Magento\Catalog\Block\Product\View" name="custom-tab-1" template="Magento_Catalog::product/view/custom-tab-1.phtml" group="detailed_info">
+				<arguments>
+					<argument translate="true" name="title" xsi:type="string">Download</argument>
+					<argument name="sort_order" xsi:type="string">15</argument>
+				</arguments>
+			</block>
+		</referenceBlock>
+		<referenceContainer name="content">
+			<block class="Magento\Catalog\Block\Product\View" name="pdpinfobox" template="Magento_Catalog::product/view/product-info.phtml" />
+ 			<!--<block class="Magento\Cms\Block\Block" name="pdp_info_box">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">pdp_info_box</argument>
+                </arguments>
+            </block>-->
+			 <block class="BlueFormBuilder\Core\Block\Form" name="bfb-form">
+                <arguments>
+                    <argument name="code" xsi:type="string">sample-order</argument>
+                </arguments>
+            </block>
+			 <block class="BlueFormBuilder\Core\Block\Form" name="enquiry-form">
+                <arguments>
+                    <argument name="code" xsi:type="string">product-enquiry-form</argument>
+                </arguments>
+            </block>
+		</referenceContainer>
+		<move element="pdpinfobox" destination="product.info.main" after="-"/>
+		
+    </body>
+</page>

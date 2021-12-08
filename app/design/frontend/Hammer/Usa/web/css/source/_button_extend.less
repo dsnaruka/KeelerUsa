@@ -1,0 +1,62 @@
+// -- Buttons
+
+// -- Primary button
+//@button-primary__background: @color-brown-dark;
+@button-primary__background: #006db3;
+@button-primary__border: 0;
+//@button-primary__hover__background: @color-brown-middle;
+@button-primary__hover__background: @button-primary__background;
+@button-primary__hover__border: 0;
+@button-primary__active__background: @button-primary__hover__background;
+
+// -- Common button
+//@button__background: @color-blue-light;
+@button__background: #006db3;
+@button__color: @color-white;
+@button__box-shadow: none;
+@button__border: 0;
+//@button__hover__background: @color-blue-dark;
+@button__hover__background: #006db3;
+@button__hover__border: 0;
+@button__hover__color: @color-white;
+//@button__focus__background: @color-blue-dark;
+@button__focus__background: #006db3;
+@button__focus__border: 0;
+@button__active__background: @button__hover__background;
+
+// -- add animation
+button, .action.primary {
+  .add-animation();
+  white-space: nowrap;
+}
+
+button {
+  color: @button__color;
+}
+
+button:not(.primary) {
+  box-shadow: none;
+}
+
+.action-primary {
+  border: none;
+  &:hover {
+    border: none;
+  }
+}
+
+a.but_learnMore {
+  font-size: @font-size__xs + 1px;
+  font-weight: @font-weight__bold;
+  text-transform: uppercase;
+  color: @color-white;
+  text-decoration: none;
+  background-color: @button-primary__background;
+  text-align: center;
+  line-height: 32px;
+  padding: 10px;
+  .add-animation(all, 0.3s, ease 0s);
+  &:hover {
+    background-color: @button-primary__background;
+  }
+}

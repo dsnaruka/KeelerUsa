@@ -1,0 +1,94 @@
+// -- Responsive variables
+
+@desktop                : ~"only screen and (min-width: 1195px)";
+@ipadpro                : ~"only screen and (min-width: 1025px) and (max-width: 1194px)";
+@tablets                : ~"only screen and (min-width: 768px) and (max-width: 1024px)";
+@smartphones            : ~"only screen and (min-width: 240px) and (max-width: 767px)";
+
+// -- Layouts
+
+@layout__width: ''; // for the fixed width layout
+@layout__max-width: 1366px;
+@layout-indent__width: 20px;
+@layout__width-xs-indent: 15px;
+
+@page-layout-1colunm__max-width: 1260px;
+
+@header__max-width: @page-layout-1colunm__max-width;
+@up-header__height: 30px;
+
+@home__max-width: 1360px;
+@footer__max-width: @page-layout-1colunm__max-width;
+@footer_mobile_max-width: 729px;
+
+// -- Fonts
+
+@font-montserrat: 'Montserrat';
+@font-family__base: @font-montserrat, @font-family__sans-serif;
+@font-raleway: 'Raleway', sans-serif;
+
+@font-icon-keeler: 'keeler-icon';
+@font-icon-keeler-color: @color-white;
+
+// -- Colors
+
+@color-skyblue: #e9f3f7;
+@color-blue-light: #cedeed;
+@color-blue-light-hover: #afbfce;
+@color-blue-middle: #337ab7;
+@color-blue-dark: #096097;
+
+@color-brown-middle: #a19c8a;
+@color-brown-dark: #978f71;
+@color-gold: @color-brown-middle;
+
+@color-silver-light: #e2e1dd;
+@color-silver: #c5c7c8;
+@color-white: #fff;
+@color-black: #000;
+
+@color-gray-dark: #4c5163;
+
+// -- Override colors
+@form-element-input-placeholder__color: @color-silver;
+@color-orange-red1: @color-blue-light; // common color
+
+// Primary button colors
+@color-blue1: @color-brown-dark;
+@color-blue2: @color-brown-middle;
+
+// -- text style
+@h3__color: @color-gray-dark;
+@h3__font-family: @font-raleway;
+@h3__font-size: @font-size__xl + 3px;
+@h3__font-weight: @font-weight__light;
+@h4__color: @color-gray-dark;
+@h4__font-size: @font-size__l;
+@h4__font-weight: @font-weight__light;
+
+// -- Minicart
+
+@minicart-icons-color: @color-gray-dark;
+@minicart-icons-color-hover: @color-black;
+@minicart-icons-color-active: @color-black;
+@minicart-icon: '\e901';
+
+// -- Search Button
+
+@search-button-icons-color: @minicart-icons-color;
+@search-button-icons-color-hover: @minicart-icons-color-hover;
+@search-button-icons-color-active: @minicart-icons-color-active;
+@search-button-icon: '\e900';
+
+// -- Animation
+.add-animation(@event: all, @duration: 300ms, @type: linear){
+  -webkit-transition: @event @duration @type;
+  -ms-transition: @event @duration @type;
+  transition: @event @duration @type;
+}
+
+html {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale!important;
+}

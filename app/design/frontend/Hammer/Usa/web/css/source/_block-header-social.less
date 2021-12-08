@@ -1,0 +1,248 @@
+// -- Social icons
+@screen__ml: 1280px;
+
+& when (@media-common = true) {
+
+
+    .social-list {
+      list-style: none;
+
+      &.footer {
+        margin-top: 8px;
+      }
+
+      .item {
+        text-align: left;
+
+        a {
+          background: url('@{baseDir}images/social-icon-bg.png') no-repeat top center;
+          text-decoration: none;
+          width: 30px;
+          height: 30px;
+          display: block;
+          .add-animation();
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+        .facebook {
+          background-position: 1px 0;
+        }
+
+        .twitter {
+          background-position: -31px 0;
+        }
+
+        .linkedin {
+          background-position: -63px 0;
+        }
+
+        .youtube {
+          background-position: -97px 0;
+        }
+
+        .g-plus {
+          background-position: -130px 0;
+        }
+      }
+    }
+
+    .phone-list {
+      list-style: none;
+
+      .item {
+        font-size: 1.2em;
+        color: black;
+        font-family: @font-family__base;
+
+        a {
+          height: 30px;
+          font-weight: bold;
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+  .header-social-wrap {
+    width: 100% !important;
+    height: @up-header__height;
+    float: left;
+    text-align: center !important;
+  }
+  .social-list {
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    .item {
+      display: inline-block !important;
+      float: left !important;
+      margin-right: 5px !important;
+      margin-bottom: 0 !important;
+
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  .phone-list {
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-left: 20px !important;
+
+    .item {
+      float: left !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      padding-left: 25px !important;
+      line-height: 30px !important;
+      border-left: 1px solid black !important;
+
+      a {
+        display: block !important;
+      }
+    }
+  }
+
+}
+
+//
+//  Tablet
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .header-social-wrap {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .social-list {
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    .item {
+      display: inline-block !important;
+      float: left !important;
+      margin-right: 5px !important;
+      margin-bottom: 0 !important;
+
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  .phone-list {
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-left: 20px !important;
+
+    .item {
+      float: left !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      padding-left: 25px !important;
+      line-height: 30px !important;
+      border-left: 1px solid black !important;
+
+      a {
+        display: block !important;
+      }
+    }
+  }
+
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .header-social-wrap {
+    text-align: center !important;
+  }
+
+  .social-list {
+    display: block !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    .item {
+      display: inline-block !important;
+      float: none !important;
+      margin-right: 5px !important;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .phone-list {
+    display: block !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+
+    .item {
+      float: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      padding-left: 0 !important;
+      line-height: 30px !important;
+      border-left: none !important;
+
+      a {
+        display: block !important;
+      }
+    }
+  }
+
+
+  .header-user-wrap {
+    &:after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+
+    .block-search {
+      float: left !important;
+      width: calc(~'100% - 40px');
+
+      .field.search {
+        .label {
+          display: none !important;
+        }
+
+        .control {
+          border: none !important;
+          padding: 0 !important;
+          margin: 0 !important;
+
+          input {
+            left: 0 !important;
+            position: relative !important;
+            margin: 0 !important;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1280px), print {
+  .header-social-wrap {
+    width: 40% !important;
+    text-align: left !important;
+  }
+}
