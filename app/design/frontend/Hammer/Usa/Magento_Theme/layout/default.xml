@@ -8,7 +8,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <head>
-            <css src="bws.css" />
+             <css src="bws.css" />
         </head>
         <referenceBlock name="logo">
             <arguments>
@@ -84,10 +84,10 @@
         <!-- Remove subscription box from footer -->
         <referenceBlock name="form.subscribe" remove="true"/>
         <referenceBlock name="footer-container">
-            <container name="keeler.footer" htmlTag="div" htmlClass="footer keeler-footer">
-                <block class="Magento\Cms\Block\Block" name="keeler_footer">
+            <container name="keeler.footer" htmlTag="div" htmlClass="footer keeler-usa-footer">
+                <block class="Magento\Cms\Block\Block" name="keeler-usa-footer">
                     <arguments>
-                        <argument name="block_id" xsi:type="string">keeler_footer</argument>
+                        <argument name="block_id" xsi:type="string">keeler-usa-footer</argument>
                     </arguments>
                 </block>
             </container>
