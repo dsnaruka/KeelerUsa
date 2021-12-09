@@ -10,62 +10,36 @@
         <head>
              <css src="bws.css" />
         </head>
-        <referenceBlock name="logo">
+     <referenceBlock name="logo">
             <arguments>
-                <argument name="logo_file" xsi:type="string">images/keelerlogo.png</argument>
+                <argument name="logo_file" xsi:type="string">images/keelerlogo.svg</argument>
                 <argument name="logo_img_width" xsi:type="number">159</argument>
                 <argument name="logo_img_height" xsi:type="number">37</argument>
             </arguments>
         </referenceBlock>
-        <!-- Header Section -->
-        <referenceBlock name="header">
-            <arguments>
-                <argument name="show_part" xsi:type="string"> </argument>
-            </arguments>
-        </referenceBlock>
-        <referenceContainer name="header.panel.wrapper">
-            <container name="search.container.content" as="search-container" label="" htmlTag="div" htmlClass="keeler-search-container" after="-">
-            </container>
-        </referenceContainer>
-        <referenceContainer name="header.panel">
-            <container name="header.up.social.panel" htmlTag="div" htmlClass="header-social-wrap" before="-">
-                <block class="Magento\Cms\Block\Block" name="up_header_left">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">up_header_left_social</argument>
-                    </arguments>
-                </block>
-                <block class="Magento\Cms\Block\Block" name="up_header_right_phone">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">up_header_right_phone</argument>
-                    </arguments>
-                </block>
-            </container>
-            <container name="header.up.user.panel" htmlTag="div" htmlClass="header-user-wrap"  after="header.up.social.panel">
-                <!--<block class="Magento\Framework\View\Element\Template" name="search-button" template="Magento_Theme::search/search-button.phtml" before="minicart"/>-->
-            </container>
-        </referenceContainer>
-        <referenceContainer name="header.up.user.panel">
-            <container name="header.links.panel" htmlTag="div" htmlClass="header-links-wrap" >
-            </container>
-        </referenceContainer>
-        <move element="header.links" destination="header.links.panel" after="-"/>
-        <referenceBlock name="register-link" remove="true" />
-        <referenceBlock name="header.links">
-            <block class="Magento\Cms\Block\Block" name="header_links_custom" before="-">
+
+         <referenceContainer name="header.panel">
+            <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
                 <arguments>
-                    <argument name="block_id" xsi:type="string">header_links</argument>
+                    <argument name="css_class" xsi:type="string">header links</argument>
                 </arguments>
             </block>
-        </referenceBlock>
-        <!--   <move element="mobile.search" destination="search.container.content" after="-" />-->
-        <!-- move minicart -->
-        <move element="minicart" destination="header.up.user.panel"  before="header.links.panel"/>
-        <move element="top.search" destination="header.up.user.panel" before="-"/>
+        </referenceContainer>
+        <move element="skip_to_content" destination="header.panel" before="-"/>
+        <move element="minicart" destination="header.panel" before="header.links"/>
+        <move element="top.search" destination="header.panel" after="header.links"/>
+        <move element="logo" destination="header.panel" after="top.search"/>
+		
+		<referenceBlock name="head.additional">
+           <block class="Magento\Framework\View\Element\Template" name="frontuser" template="Magento_Theme::html/head_local.phtml"/>
+		</referenceBlock>
+    <referenceBlock name="navigation.sections" remove="true"/>
+    
         <referenceContainer name="header-wrapper">
             <container name="header.main.links.panel" htmlTag="div" htmlClass="header-main-links-wrap" after="-">
-                <block class="Magento\Cms\Block\Block" name="header_main_links_custom">
+                <block class="Blackbird\MenuManager\Block\Menu" name="header_main_links_custom">
                     <arguments>
-                        <argument name="block_id" xsi:type="string">header_main_links</argument>
+                        <argument name="menu" xsi:type="string">main-menu</argument>
                     </arguments>
                 </block>
             </container>
@@ -73,6 +47,7 @@
                 <block class="Hammer\CatCollection\Block\Categories" name="header_school_custom_block" template="Magento_Theme::html/school-custom-links.phtml" after="-"/>
             </container>
         </referenceContainer>
+
         <!-- Remove links from footer -->
         <referenceBlock name="report.bugs" remove="true"/>
         <referenceBlock name="privacy-policy-link" remove="true" />

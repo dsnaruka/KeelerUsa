@@ -16,7 +16,7 @@
 <a href="#" data-mage-init='{"toggleAdvanced": {"selectorsToggleClass": "active", "baseToggleClass": "expanded", "toggleContainers": ".header-main-links-wrap"}}' id="toggleNav" title="Navigation" class="action"><?= /* @escapeNotVerified */ __('Toggle Nav') ?></a>
 
 <?php if ($block->isHomePage()):?>
-<strong class="logo">
+<div class="logo">
     <?php else: ?>
     <a class="logo" href="<?= $block->getUrl('') ?>" title="<?= /* @escapeNotVerified */ $storeName ?>">
         <?php endif ?>
@@ -27,7 +27,7 @@
             <?= $block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
         />
         <?php if ($block->isHomePage()):?>
-</strong>
+        </div>
 <?php else:?>
     </a>
 <?php endif?>

@@ -1,5 +1,15 @@
  .logo img {
-     max-width: 160px;
+     max-width: 229px;
+ }
+ 
+ header.page-header {
+     background: #052133;
+     margin-bottom: 0px!important;
+ }
+ 
+ header.page-header .panel.wrapper {
+     background-color: #052133!important;
+     border-bottom: none!important;
  }
  
  .product-info-main .product.attribute.overview {

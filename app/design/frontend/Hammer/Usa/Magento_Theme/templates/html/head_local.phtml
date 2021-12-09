@@ -1,0 +1,14 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$urlInterface = $objectManager->get('\Magento\Framework\UrlInterface');
+$urlInterface->getCurrentUrl(); 
+
+if (strpos($urlInterface->getCurrentUrl(), 'single-use-cryo-probe.html') !== false || strpos($urlInterface->getCurrentUrl(), 'tonoclear-disposable-applanation-prisms.html') !== false ) {
+?>
+
+<!-- Event snippet for Cryo Page views conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-335996245/JZv_CNnnj4EDENXKm6AB'});
+</script>
+	
+<?php } 
