@@ -17,36 +17,54 @@
                 <argument name="logo_img_height" xsi:type="number">37</argument>
             </arguments>
         </referenceBlock>
-
-         <referenceContainer name="header.panel">
+          
+         <referenceContainer name="header.container">
+          <container name="header.panel.wrapper" htmlClass="panel container" htmlTag="div" before="-">
+           <container name="header.panel" label="Page Header Panel" htmlTag="div" htmlClass="panel header-in">
             <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
                 <arguments>
                     <argument name="css_class" xsi:type="string">header links</argument>
                 </arguments>
             </block>
-        </referenceContainer>
-        <move element="skip_to_content" destination="header.panel" before="-"/>
-        <move element="minicart" destination="header.panel" before="header.links"/>
-        <move element="top.search" destination="header.panel" after="header.links"/>
-        <move element="logo" destination="header.panel" after="top.search"/>
-		
-		<referenceBlock name="head.additional">
-           <block class="Magento\Framework\View\Element\Template" name="frontuser" template="Magento_Theme::html/head_local.phtml"/>
-		</referenceBlock>
-    <referenceBlock name="navigation.sections" remove="true"/>
-    
-        <referenceContainer name="header-wrapper">
-            <container name="header.main.links.panel" htmlTag="div" htmlClass="header-main-links-wrap" after="-">
+            <block class="Magento\Cms\Block\Block" name="up_header_right_phone">
+              <arguments>
+               <argument name="block_id" xsi:type="string">up_header_right_phone</argument>
+           </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="header-promotion-button">
+              <arguments>
+               <argument name="block_id" xsi:type="string">header-promotion-button</argument>
+           </arguments>
+            </block>
+      </container>
+           <container name="header.main.links.panel" htmlTag="div" htmlClass="header-main-links-wrap" after="-">
                 <block class="Blackbird\MenuManager\Block\Menu" name="header_main_links_custom">
                     <arguments>
                         <argument name="menu" xsi:type="string">main-menu</argument>
                     </arguments>
                 </block>
             </container>
+    </container>
+        </referenceContainer>
+
+        <move element="skip_to_content" destination="header.panel" before="-"/>
+        <move element="header-promotion-button" destination="header.panel" before="minicart"/>
+        <move element="minicart" destination="header.panel" before="header.links"/>
+        <move element="top.search" destination="header.panel" after="header.links"/>
+        <move element="up_header_right_phone" destination="header.panel" after="top.search"/>
+        <move element="logo" destination="header.panel" after="top.search"/>
+		
+		<!-- <referenceBlock name="head.additional">
+           <block class="Magento\Framework\View\Element\Template" name="frontuser" template="Magento_Theme::html/head_local.phtml"/>
+		</referenceBlock> -->
+    <!-- <referenceBlock name="navigation.sections" remove="true"/> -->
+    
+        <!-- <referenceContainer name="header-wrapper">
+       
             <container name="header.school.links" htmlTag="div" htmlClass="header-school-links" after="-">
                 <block class="Hammer\CatCollection\Block\Categories" name="header_school_custom_block" template="Magento_Theme::html/school-custom-links.phtml" after="-"/>
             </container>
-        </referenceContainer>
+        </referenceContainer> -->
 
         <!-- Remove links from footer -->
         <referenceBlock name="report.bugs" remove="true"/>
