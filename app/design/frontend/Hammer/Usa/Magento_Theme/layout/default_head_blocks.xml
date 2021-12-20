@@ -1,6 +1,9 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <!-- External resources -->
+ 
+<link src_type="url" type="text/css" src="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" />
+
+     <!-- External resources -->
         <!-- <css src="css/bootstrap-grid-system.min.css" /> -->
         <css src="css/style.css" />
 		<css src="css/bws.css" />

@@ -8,24 +8,24 @@
 // -- Layouts
 
 @layout__width: ''; // for the fixed width layout
-@layout__max-width: 1366px;
+@layout__max-width: 1480px;
 @layout-indent__width: 20px;
 @layout__width-xs-indent: 15px;
 
-@page-layout-1colunm__max-width: 1260px;
+@page-layout-1colunm__max-width: 1480px;
 
 @header__max-width: @page-layout-1colunm__max-width;
 @up-header__height: 30px;
 
-@home__max-width: 1360px;
+@home__max-width: 1480px;
 @footer__max-width: @page-layout-1colunm__max-width;
 @footer_mobile_max-width: 729px;
 
 // -- Fonts
 
-@font-montserrat: 'Montserrat';
-@font-family__base: @font-montserrat, @font-family__sans-serif;
-@font-raleway: 'Raleway', sans-serif;
+@font-montserrat: 'Poppins';
+@font-family__base: @font-montserrat, sans-serif;
+@font-raleway: 'Poppins', sans-serif;
 
 @font-icon-keeler: 'keeler-icon';
 @font-icon-keeler-color: @color-white;
@@ -91,4 +91,10 @@ html {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale!important;
+}
+
+body{
+  font-size: 15px;
+  color: #052133;
+  line-height: 21px;
 }

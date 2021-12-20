@@ -7,9 +7,7 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <head>
-             <css src="bws.css" />
-        </head>
+ 
      <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/keelerlogo.svg</argument>
@@ -21,11 +19,11 @@
          <referenceContainer name="header.container">
           <container name="header.panel.wrapper" htmlClass="panel container" htmlTag="div" before="-">
            <container name="header.panel" label="Page Header Panel" htmlTag="div" htmlClass="panel header-in">
-            <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
-                <arguments>
+          <block class="Magento\Customer\Block\Account\AuthorizationLink" name="header.links" template="account/link/authorization-header.phtml"/>
+                <!-- <arguments>
                     <argument name="css_class" xsi:type="string">header links</argument>
-                </arguments>
-            </block>
+                </arguments> -->
+        
             <block class="Magento\Cms\Block\Block" name="up_header_right_phone">
               <arguments>
                <argument name="block_id" xsi:type="string">up_header_right_phone</argument>
@@ -46,8 +44,7 @@
             </container>
     </container>
         </referenceContainer>
-
-        <move element="skip_to_content" destination="header.panel" before="-"/>
+      
         <move element="header-promotion-button" destination="header.panel" before="minicart"/>
         <move element="minicart" destination="header.panel" before="header.links"/>
         <move element="top.search" destination="header.panel" after="header.links"/>
@@ -76,6 +73,8 @@
         <referenceBlock name="mp_footer_link" remove="true" />
         <!-- Remove subscription box from footer -->
         <referenceBlock name="form.subscribe" remove="true"/>
+
+        
         <referenceBlock name="footer-container">
             <container name="keeler.footer" htmlTag="div" htmlClass="footer keeler-usa-footer">
                 <block class="Magento\Cms\Block\Block" name="keeler-usa-footer">

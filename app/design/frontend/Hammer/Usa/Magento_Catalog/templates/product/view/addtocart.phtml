@@ -14,33 +14,36 @@ $showEnquiry        = $_helper->productAttribute($_product, $_product->getMakeAn
 $orderSample        = $_helper->productAttribute($_product, $_product->getshowOrderASample(), 'show_order_a_sample');
 ?>
 <?php if ($_product->isSaleable() && $showEnquiry != "1" ): ?>
-<div class="box-tocart">
+    <div class="box-tocart">
     <div class="fieldset">
-        <?php if ($block->shouldRenderQuantity()) :?>
+        <?php if ($block->shouldRenderQuantity()): ?>
         <div class="field qty">
-            <label class="label" for="qty"><span><?= $block->escapeHtml(__('Qty')) ?></span></label>
+            <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Qty') ?></span></label>
             <div class="control">
+                <div class="minus-one">-</div>
                 <input type="number"
                        name="qty"
                        id="qty"
-                       min="0"
-                       value="<?= $block->getProductDefaultQty() * 1 ?>"
-                       title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
+                       value="<?= /* @escapeNotVerified */ $block->getProductDefaultQty() * 1 ?>"
+                       title="<?= /* @escapeNotVerified */ __('Qty') ?>"
                        class="input-text qty"
-                       data-validate="<?= $block->escapeHtmlAttr(json_encode($block->getQuantityValidators())) ?>"
+                       data-validate="<?= $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
                        />
+                <div class="plus-one">+</div>
             </div>
         </div>
         <?php endif; ?>
         <div class="actions">
             <button type="submit"
-                    title="<?= $block->escapeHtmlAttr($buttonTitle) ?>"
+                    title="<?= /* @escapeNotVerified */ $buttonTitle ?>"
                     class="action primary tocart"
-                    id="product-addtocart-button" disabled>
-                <span><?= $block->escapeHtml($buttonTitle) ?></span>
+                    id="product-addtocart-button">
+                <span><?= /* @escapeNotVerified */ $buttonTitle ?></span>
             </button>
             <?= $block->getChildHtml('', true) ?>
+
         </div>
+
     </div>
 </div>
 <?php endif; ?>
@@ -116,6 +119,14 @@ require(['jquery'], function($) {
             modal.style.display = "none";
         }
     }
+    $('.control .minus-one').click(function() {
+        var input_value = parseInt($(this).siblings('input').val());
+        if(input_value>=1) $(this).siblings('input').val(input_value-1);
+    });
+    $('.control .plus-one').click(function() {
+        var input_value = parseInt($(this).siblings('input').val());
+        $(this).siblings('input').val(input_value+1);
+    });
 });
 </script>
 <?php endif; ?>
