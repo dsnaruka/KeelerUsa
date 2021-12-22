@@ -271,15 +271,22 @@
   .hp05 .hp005 {
     padding: 0 20px;
   }
+  .hp05 .hp005 .col-6 {
+    margin-bottom: 25px;
+  }
+  .hp05 .hp005 ul li {
+    margin-bottom: 9px;
+  }
   .hp05 .hp005 ul li a {
     font-size: 13px;
     line-height: 19px;
   }
   .hp05 .hp005 p {
     font-size: 15px;
+    margin: 0 0 10px;
   }
   .hp06 {
-    padding: 40px 15px 5px;
+    padding: 20px 15px 5px;
   }
   .hp06 .footer-address {
     padding-left: 0px;
@@ -307,6 +314,300 @@
     padding: 0 2px;
   }
 }
+body.customer-account-login .page-title-wrapper {
+  display: none;
+}
+body.customer-account-login .login-container {
+  padding: 60px 0 0;
+  margin-bottom: 40px;
+}
+body.customer-account-login .login-container .block-new-customer .block-content {
+  font-weight: 500;
+  font-size: 16px;
+}
+body.customer-account-login .login-container .block-title {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 35px;
+  text-align: left;
+  color: #052133;
+  margin-bottom: 20px;
+  border-bottom: 0;
+}
+body.customer-account-login .login-container .field.note {
+  font-weight: 500;
+  font-size: 16px;
+}
+body.customer-account-login .login-container .actions-toolbar .primary .action.primary {
+  background: #0B7BBF;
+  color: #ffffff;
+  padding: 0 40px;
+  margin: 0;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  border: none !important;
+  outline: 0;
+  margin-right: 20px;
+}
+body.customer-account-login .login-container .actions-toolbar .primary .action.primary:hover {
+  background: #F3901B;
+}
+body.customer-account-login .login-container .actions-toolbar .secondary {
+  margin: 10px 0px 0px 0px;
+}
+body.customer-account-login .login-container .actions-toolbar .secondary a.action.remind {
+  font-size: 15px;
+  color: #052133;
+  font-weight: 500;
+}
+body.customer-account-login .login-container .block.block-customer-login .block-content {
+  border: 1px solid #eaeaea;
+  padding: 30px;
+  border-radius: 6px;
+}
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset .field .control {
+  width: 100%;
+}
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset .legend {
+  text-align: center;
+  margin: 0;
+  float: none;
+  font-size: 22px!important;
+  color: #052133;
+  font-weight: 500;
+  border-bottom: 1px solid #eaeaea;
+}
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset .legend span {
+  font-size: 22px;
+  font-weight: 500;
+  color: #052133;
+}
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset .field {
+  position: relative;
+}
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset .label {
+  margin: 0 0 8px;
+  font-size: 15px;
+  color: #052133;
+  font-weight: 500;
+}
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset input[type="text"],
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset input[type="password"],
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset input[type="url"],
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset input[type="tel"],
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset input[type="search"],
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset input[type="number"],
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset input[type="datetime"],
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset input[type="email"] {
+  background: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #eaeaea;
+  border-radius: 1px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 9px;
+  vertical-align: baseline;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+body.customer-account-login .login-container .block.block-customer-login .block-content .form.form-login .fieldset select {
+  background: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #eaeaea;
+  border-radius: 1px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 9px;
+  vertical-align: baseline;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.customer-account-create .page-title-wrapper {
+  text-align: center;
+  padding: 50px 0 0;
+}
+.customer-account-create .form.create.account {
+  min-width: 730px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px 30px 40px;
+  border: 1px solid #eaeaea;
+  background: #ffffff;
+  box-shadow: none;
+  text-align: initial;
+  border-radius: 6px;
+  margin-bottom: 40px;
+}
+.customer-account-create .form.create.account .fieldset .legend {
+  text-align: center;
+  margin: 0;
+  float: none;
+  font-size: 22px!important;
+  color: #052133;
+  font-weight: 500;
+  border-bottom: 1px solid #eaeaea;
+}
+.customer-account-create .form.create.account .fieldset .legend span {
+  font-size: 22px;
+  font-weight: 500;
+  color: #052133;
+}
+.customer-account-create .form.create.account .fieldset .field {
+  position: relative;
+}
+.customer-account-create .form.create.account .fieldset .label {
+  margin: 0 0 8px;
+  font-size: 15px;
+  color: #052133;
+  font-weight: 500;
+}
+.customer-account-create .form.create.account .fieldset input[type="text"],
+.customer-account-create .form.create.account .fieldset input[type="password"],
+.customer-account-create .form.create.account .fieldset input[type="url"],
+.customer-account-create .form.create.account .fieldset input[type="tel"],
+.customer-account-create .form.create.account .fieldset input[type="search"],
+.customer-account-create .form.create.account .fieldset input[type="number"],
+.customer-account-create .form.create.account .fieldset input[type="datetime"],
+.customer-account-create .form.create.account .fieldset input[type="email"] {
+  background: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #eaeaea;
+  border-radius: 1px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 9px;
+  vertical-align: baseline;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.customer-account-create .form.create.account .fieldset select {
+  background: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #eaeaea;
+  border-radius: 1px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 9px;
+  vertical-align: baseline;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.customer-account-create .form.create.account .actions-toolbar .primary .action.primary {
+  background: #0B7BBF;
+  color: #ffffff;
+  padding: 0 25px;
+  margin: 0;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  border: none !important;
+  outline: 0;
+}
+.customer-account-create .form.create.account .actions-toolbar .primary .action.primary:hover {
+  background: #F3901B;
+}
+.customer-account-create .form.create.account .actions-toolbar .secondary .action.back {
+  background: #0B7BBF;
+  color: #ffffff;
+  padding: 0 25px;
+  margin: 0;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  border: none !important;
+  outline: 0;
+}
+.customer-account-create .form.create.account .actions-toolbar .secondary .action.back:hover {
+  background: #F3901B;
+}
+.customer-account-forgotpassword .page-title-wrapper {
+  text-align: center;
+  padding: 50px 0 0;
+}
+.customer-account-forgotpassword .form.password.forget {
+  padding: 30px 20px;
+  margin: 0 auto;
+  border: 1px solid #eaeaea;
+  background: #ffffff;
+  box-shadow: none;
+  text-align: initial;
+  border-radius: 6px;
+  margin-bottom: 40px;
+}
+.customer-account-forgotpassword .form.password.forget .field.note {
+  font-size: 16px;
+  font-weight: 500;
+}
+.customer-account-forgotpassword .form.password.forget .fieldset .field {
+  position: relative;
+}
+.customer-account-forgotpassword .form.password.forget .fieldset .label {
+  margin: 0 0 8px;
+  font-size: 15px;
+  color: #052133;
+  font-weight: 500;
+}
+.customer-account-forgotpassword .form.password.forget .fieldset input[type="text"],
+.customer-account-forgotpassword .form.password.forget .fieldset input[type="password"],
+.customer-account-forgotpassword .form.password.forget .fieldset input[type="url"],
+.customer-account-forgotpassword .form.password.forget .fieldset input[type="tel"],
+.customer-account-forgotpassword .form.password.forget .fieldset input[type="search"],
+.customer-account-forgotpassword .form.password.forget .fieldset input[type="number"],
+.customer-account-forgotpassword .form.password.forget .fieldset input[type="datetime"],
+.customer-account-forgotpassword .form.password.forget .fieldset input[type="email"] {
+  background: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #eaeaea;
+  border-radius: 1px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 9px;
+  vertical-align: baseline;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.customer-account-forgotpassword .form.password.forget .actions-toolbar .primary .action.primary {
+  background: #0B7BBF;
+  color: #ffffff;
+  padding: 0 25px;
+  margin: 0;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  border: none !important;
+  outline: 0;
+}
+.customer-account-forgotpassword .form.password.forget .actions-toolbar .primary .action.primary:hover {
+  background: #F3901B;
+}
 .minicart-wrapper.active .action.close {
   outline: 0;
   color: #052133;
@@ -326,7 +627,13 @@
 }
 .minicart-wrapper.active .block-minicart.ui-dialog-content .action.primary {
   font-weight: 500;
-  background: #0B7BBF;
+  background: #F3901B;
+  border: none;
+  outline: 0;
+}
+.minicart-wrapper.active .block-minicart.ui-dialog-content .action.primary:hover {
+  background: #052133;
+  color: #fff;
 }
 .minicart-wrapper.active .block-minicart.ui-dialog-content .product-item-details a {
   color: #052133;
@@ -396,6 +703,98 @@
     margin-bottom: 0px;
     padding-bottom: 20px;
   }
+}
+.page-layout-1column .related-pro .owl-item {
+  padding-left: 15px;
+}
+.page-layout-1column .related-pro .owl-dots .owl-dot {
+  border: none;
+  outline: 0;
+}
+.page-layout-1column .related-pro .owl-dots .owl-dot span {
+  background: #0B7BBF !important;
+}
+.page-layout-1column .related-pro .owl-dots .owl-dot.active span {
+  background: #052133 !important;
+}
+.page-layout-1column .block.related {
+  padding-bottom: 50px;
+}
+.page-layout-1column .block.related .related-available .product-item-name {
+  margin-left: 0;
+}
+.page-layout-1column .block.related .block-title.title {
+  padding: 80px 0 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.page-layout-1column .block.related .block-title.title h2 {
+  margin-top: 0;
+  margin-bottom: 10px !important;
+  letter-spacing: 0.76px;
+  color: #052133;
+  font-size: 35px;
+  line-height: 40px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  text-align: center;
+  font-weight: 500;
+}
+.page-layout-1column .products-grid .product-item {
+  width: 100%!important;
+  display: block!important;
+  padding: 20px 12px 0px 0px;
+}
+.page-layout-1column .products-grid .product-item .product-item-info {
+  padding: 15px 15px 15px;
+  width: 100% !important;
+  text-align: center;
+}
+.page-layout-1column .products-grid .product-item .product-item-info:hover {
+  background: #ffffff;
+  box-shadow: 0px 0px 20px #0000000f !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 15px 15px 15px;
+  position: relative;
+  z-index: 9;
+}
+.page-layout-1column .products-grid .product-item .product-item-info .product-item-details .price-box {
+  text-align: center;
+  display: inline-block;
+}
+.page-layout-1column .products-grid .product-item .product-item-info .product-item-details .price-box .special-price {
+  float: right;
+}
+.page-layout-1column .products-grid .product-item .product-item-info .product-item-details .price-box .old-price {
+  margin-right: 8px;
+  float: right;
+  margin-top: 0;
+}
+.page-layout-1column .products-grid .product-item .product-item-info .product-item-details .price-box .old-price .price {
+  text-decoration: line-through;
+  color: #a8aeba !important;
+}
+.page-layout-1column .products-grid .product-item .product-item-info .product-item-details .price-box .price-label {
+  display: none;
+}
+.page-layout-1column .products-grid .product-item .product-item-info .product-item-details .price-box .price {
+  font-weight: 500 !important;
+  white-space: nowrap;
+  letter-spacing: 0.54px;
+  color: #3C647D !important;
+  font-size: 20px;
+}
+.page-layout-1column .products-grid .product-item .product-item-info .product-item-details a.product-item-link {
+  font-size: 14px;
+  color: #052133;
+  text-decoration: none;
+}
+.page-layout-1column .products-grid .product-item .product-item-info .product-item-details .field.choice {
+  display: none;
+}
+.page-layout-1column .products-grid .product-item .product-item-info .product-item-details .product-item-actions {
+  display: none;
 }
 .catalog-product-view.page-layout-1column .product.media {
   width: 55%;
@@ -970,6 +1369,7 @@
 }
 .catalog-category-view .products-grid .product-item-info a.product-item-link {
   font-size: 14px;
+  color: #052133;
 }
 .catalog-category-view .products-grid .product-item-info a.product-item-link:hover {
   text-decoration: none;
@@ -1388,7 +1788,89 @@
     padding: 0 1px 0;
   }
 }
+@media all and (min-width: 768px) {
+  .navigation .level0 .submenu {
+    background: #ffffff;
+    border: none!important;
+    box-shadow: 0px 0px 20px #0000000f !important;
+    font-weight: 500!important;
+    min-width: 275px!important;
+    padding: 10px 0!important;
+    display: none;
+    left: 0;
+    margin: 0 !important;
+    position: absolute;
+    z-index: 1;
+    margin-top: 11px;
+    text-align: left!important;
+  }
+  .navigation .level0 .submenu a {
+    display: block;
+    line-height: 21px!important;
+    color: #052133 !important;
+    padding: 7px 20px!important;
+    font-size: 14px!important;
+  }
+  .navigation .level0 .submenu a:hover {
+    color: #6CBCE8 !important;
+  }
+}
 @media all and (max-width: 767px) {
+  .navigation .level0 .submenu {
+    padding: 10px 0!important;
+  }
+  .navigation .level0 .submenu a {
+    color: #052133;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 7px  0 7px;
+  }
+  .page-layout-1column .block.related {
+    padding-bottom: 0px;
+  }
+  .page-layout-1column .block.related .products-grid .product-item .product-item-info .product-item-details .price-box .price {
+    font-size: 14px;
+  }
+  .page-layout-1column .block.related .block-title.title {
+    padding: 50px 0 0;
+  }
+  .page-layout-1column .block.related .block-title.title h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .customer-account-forgotpassword .page-title-wrapper {
+    text-align: center;
+    padding: 20px 0 0;
+  }
+  .customer-account-forgotpassword .field.note {
+    text-align: center;
+  }
+  body.customer-account-login .login-container {
+    padding: 40px 0 0;
+    margin-bottom: 30px;
+  }
+  body.customer-account-login .login-container .block-title {
+    font-size: 30px;
+    line-height: 33px;
+    border-bottom: 0;
+    text-align: center;
+  }
+  body.customer-account-login .login-container .field.note {
+    text-align: center;
+  }
+  body.customer-account-login .login-container .block-new-customer {
+    text-align: center;
+  }
+  .customer-account-create .page-title-wrapper {
+    text-align: center;
+    padding: 20px 0 15px;
+  }
+  .customer-account-create .form.create.account {
+    min-width: 100%;
+    width: 100%;
+    padding: 20px 15px 30px;
+    margin-bottom: 10px;
+  }
   .catalog-product-view .columns .column.main {
     padding-bottom: 0px;
     padding-top: 20px;

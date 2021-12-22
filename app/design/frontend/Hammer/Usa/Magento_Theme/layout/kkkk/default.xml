@@ -23,7 +23,10 @@
                 <!-- <arguments>
                     <argument name="css_class" xsi:type="string">header links</argument>
                 </arguments> -->
-        
+             
+            
+            
+           
             <block class="Magento\Cms\Block\Block" name="up_header_right_phone">
               <arguments>
                <argument name="block_id" xsi:type="string">up_header_right_phone</argument>
@@ -77,9 +80,9 @@
         
         <referenceBlock name="footer-container">
             <container name="keeler.footer" htmlTag="div" htmlClass="footer keeler-usa-footer">
-                <block class="Magento\Cms\Block\Block" name="keeler_footer">
+                <block class="Magento\Cms\Block\Block" name="keeler-usa-footer">
                     <arguments>
-                        <argument name="block_id" xsi:type="string">keeler_footer</argument>
+                        <argument name="block_id" xsi:type="string">keeler-usa-footer</argument>
                     </arguments>
                 </block>
             </container>
