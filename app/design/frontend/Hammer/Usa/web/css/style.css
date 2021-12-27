@@ -323,8 +323,8 @@ body.customer-account-login .page-title-wrapper {
   display: none;
 }
 body.customer-account-login .login-container {
-  padding: 40px 0 0;
-  margin-bottom: 40px;
+  padding: 70px 0 0;
+  margin-bottom: 0px;
 }
 body.customer-account-login .login-container .fieldset:after {
   display: none;
@@ -431,7 +431,7 @@ body.customer-account-login .login-container .block.block-customer-login .block-
 }
 .customer-account-create .page-title-wrapper {
   text-align: center;
-  padding: 30px 0 0;
+  padding: 15px 0 10px;
 }
 .customer-account-create .form-create-account .fieldset.create.account:after {
   display: none;
@@ -446,7 +446,7 @@ body.customer-account-login .login-container .block.block-customer-login .block-
   box-shadow: none;
   text-align: initial;
   border-radius: 6px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 .customer-account-create .form.create.account fieldset.create.account {
   margin: 0 0 30px;
@@ -538,7 +538,7 @@ body.customer-account-login .login-container .block.block-customer-login .block-
 }
 .customer-account-forgotpassword .page-title-wrapper {
   text-align: center;
-  padding: 50px 0 0;
+  padding: 15px 0 10px;
 }
 .customer-account-forgotpassword .form.password.forget {
   padding: 30px 20px;
@@ -548,7 +548,7 @@ body.customer-account-login .login-container .block.block-customer-login .block-
   box-shadow: none;
   text-align: initial;
   border-radius: 6px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 .customer-account-forgotpassword .form.password.forget .field.note {
   font-size: 15px;
@@ -1878,8 +1878,8 @@ body.customer-account-login .login-container .block.block-customer-login .block-
     text-align: center;
   }
   body.customer-account-login .login-container {
-    padding: 40px 0 0;
-    margin-bottom: 30px;
+    padding: 70px 0 0;
+    margin-bottom: 0px;
   }
   body.customer-account-login .login-container .block-title {
     font-size: 30px;
